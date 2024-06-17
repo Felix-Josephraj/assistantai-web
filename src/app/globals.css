@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --midnight-blue: #1e1541;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.home-page,
+.about-page,
+.terms-page,
+.delete-page {
+  /* background: #16132b linear-gradient(140.67deg, #16132b -4.72%, #000 94.21%); */
+  background: #16132b linear-gradient(140.67deg, #16132b -4.72%, #000 94.21%);
+  /* background-color: #1c1c1e; */
+  background-attachment: scroll;
+}
+.typewriter {
+  font-size: 22px;
+  color: #008f6b;
+  background-image: linear-gradient(to right, #008f6b, #556270);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  /* font-size: 36px;
+  font-weight: bold; */
+  /* font-family: Arial, sans-serif; */
+}
+.heading {
+  /* background: #121fcf;
+  background: linear-gradient(to right, #121fcf 0%, #cf1512 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+.accurate {
+  /* background: #00ff00;
+  background: linear-gradient(to left, #00ff00 0%, #00ffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  background: -webkit-linear-gradient(-80deg, #4158d0 1%, #c850c0 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature-card-container {
+  background-image: linear-gradient(140.67deg, #16132b -4.72%, #000 94.21%);
+  /* background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)); */
+}
+
+.zoom-in {
+  width: 0; /* Initial width */
+  height: auto;
+  animation: zoomin 1s forwards; /* Animation duration and fill mode */
+}
+.person-zoom-in {
+  /* width: 0; Initial width */
+  height: 0;
+  animation: zoominperson 1s forwards; /* Animation duration and fill mode */
+}
+
+@keyframes zoominperson {
+  from {
+    height: 0; /* Start width */
+  }
+  to {
+    height: 28vw;
+  }
+}
+@keyframes zoomin {
+  from {
+    width: 0; /* Start width */
+  }
+  to {
+    width: 48px; /* Original width */
+  }
+}
+
+.card-left {
+  transition: transform 0.5s ease;
+  transform: translateX(-100%);
+}
+
+.slide-from-left {
+  transform: translateX(0);
+}
+
+.appbar {
+  /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.6) 50%, rgba(64, 64, 64, 0)); */
+  backdrop-filter: blur(2px);
+}
+
+.footer-container {
+  /* background-image: url('/footerbg.png');  */
+  background-size: cover; /* Scale the background image to cover the entire div */
+  background-position: center;
+}
