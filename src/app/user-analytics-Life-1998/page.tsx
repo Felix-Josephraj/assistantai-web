@@ -3,7 +3,7 @@ import { Button } from '@mui/material'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-const page = () => {
+export default function Page() {
   const baseUrl = 'https://gptai-kltryxbqkq-el.a.run.app'
   // const baseUrl = 'http://192.168.29.7:8080'
   const [userDetails, setUserDetails] = useState<{ id: string; createdAt: string }[]>([])
@@ -61,5 +61,3 @@ const page = () => {
     </div>
   )
 }
-
-export default page
